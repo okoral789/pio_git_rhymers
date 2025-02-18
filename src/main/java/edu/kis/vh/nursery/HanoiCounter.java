@@ -9,7 +9,7 @@ public class HanoiCounter extends defaultCountingOutCounter {
     }
 
     public void countIn(int in) {
-        if (!callCheck() && in > peekaboo())
+        if (!isEmpty() && in > peek())
             totalRejected++;
         else
             super.countIn(in);

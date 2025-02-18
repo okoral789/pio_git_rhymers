@@ -6,12 +6,12 @@ public class defaultCountingOutCounter {
 
     public int total = -1;
 
-    public void countIn(int in) {
+    public void addNumber(int in) {
         if (!isFull())
             NUMBERS[++total] = in;
     }
 
-    public boolean callCheck() {
+    public boolean isEmpty() {
         return total == -1;
     }
 
@@ -19,7 +19,7 @@ public class defaultCountingOutCounter {
         return total == 11;
     }
 
-    protected int peekaboo() {
+    protected int peek() {
         if (callCheck())
             return -1;
         return NUMBERS[total];
